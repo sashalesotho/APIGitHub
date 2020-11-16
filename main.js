@@ -63,7 +63,9 @@ async function loadRepos() {
     clearUsers();
   }
 }
-
+document.querySelector(".form-group").onclick = function () {
+  input.value = "";
+};
 loadRepos = debounce(loadRepos, 500);
 input.addEventListener("input", loadRepos);
 // input.addEventListener('input', () => {
