@@ -63,7 +63,9 @@ async function loadRepos() {
     clearUsers();
   }
 }
-
+elementReposList.onclick = function () {
+  input.value = "";
+};
 loadRepos = debounce(loadRepos, 500);
 input.addEventListener("input", loadRepos);
 // input.addEventListener('input', () => {
