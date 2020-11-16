@@ -65,8 +65,8 @@ async function loadRepos() {
 }
 
 loadRepos = debounce(loadRepos, 500);
-input.addEventListener("keyup", loadRepos);
-// input.addEventListener('keyup', () => {
+input.addEventListener("input", loadRepos);
+// input.addEventListener('input', () => {
 //     if (!input.value) {
 //         document.querySelector('.container').innerHTML = '';
 //     }
